@@ -200,3 +200,27 @@
         });
     });
 })(jQuery, window, document);
+
+window.requestAnimFrame = (function () {
+    return  window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function (callback) {
+        window.setTimeout(callback, 1000 / 60);
+      };
+  })();
+  
+
+  // ------- Visitors count -------
+  var percentEl = document.querySelector('#visits');
+  $.getJSON("https://api.countapi.xyz/hit/kiiirtiiii.github.ioportfolio-website/visits", function(response) {
+    var max = response.value;
+  
+  (function animloop() {
+    if (percentEl.innerHTML >= max) { return; } //Stop recursive when max reach
+    requestAnimFrame(animloop); 
+    percentEl.innerHTML++;
+  })();
+});

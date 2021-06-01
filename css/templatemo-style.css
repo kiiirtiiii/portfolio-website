@@ -58,6 +58,7 @@ html {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+
 a {
   color: #fff;
   text-decoration: none;
@@ -307,6 +308,10 @@ a#logo {
   text-transform: uppercase;
   font-weight: 700;
 }
+#logo span {
+  margin-right: 5px;
+}
+
 .navbar {
   padding: 0;
 }
@@ -878,3 +883,9 @@ textarea.form-control {
   padding: 1.25rem 0;
   z-index: 0; 
 }  
+
+#vcount {
+  text-transform: lowercase;
+  font-weight: 500;
+  font-size: medium;
+}
