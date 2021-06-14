@@ -809,6 +809,8 @@ textarea.form-control {
 .skills-row {
   margin-top: 80px;
 }
+
+/*
 .skill-item {
   border-bottom: 1px solid rgba(250,250,250,0.1);
   margin-bottom: 20px;
@@ -873,6 +875,7 @@ textarea.form-control {
 .per-60 {
   width: 60%;
 }
+*/
 
 .ftco-footer {
   position:fixed;
@@ -888,4 +891,18 @@ textarea.form-control {
   text-transform: lowercase;
   font-weight: 500;
   font-size: medium;
+}
+
+.skill-list {
+  padding: 0;
+}
+
+.skill-list li{
+  display:inline;
+  padding: 3%;
+}
+
+.skill-list li img {
+  width: 15%;
+  padding-bottom: 5%;
 }
